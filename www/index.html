@@ -38,37 +38,85 @@
 </head>
  
 <body>
-  <div data-role="page" id="home">
-    <div data-theme="a" data-role="header">
-      <h3>
-            Movie List
-        </h3>
-    </div>
-    <div data-role="content">
-      <div class="example-wrapper" data-iscroll>
-        <ul data-role="listview" id="movie-list" data-theme="a">
- 
-        </ul>
-      </div>
-    </div>
-    <div data-theme="a" data-role="footer">
-      <h1>Copyright 2015</h1>
-    </div>
-  </div>
-  <div data-role="page" id="headline">
-    <div data-theme="a" data-role="header">
-      <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a> 
-      <h3>
-            Movie Info
-        </h3>
-    </div>
-    <div data-role="content">
-      <ul data-role="listview" id="movie-data" data-theme="a">
- 
-      </ul>
-    </div>
-  </div>
- 
+<!-- Start of first page: #one -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>PokeApp</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+		<ul data-role="listview" data-inset="true">
+    <li><a href="#pokedex">
+        <img src="img/pokedex.png">
+    <h2>Pokedex</h2>
+    <p>Pokedex, find all the information of all the pokemon in here!</p></a>
+    </li>
+    <li><a href="#">
+        <img src="img/grey_pokeball.png">
+    <h2>My Pokemon</h2>
+    <p>An overview of all your pokemon!</p></a>
+    </li>
+    <li><a href="#">
+        <img src="img/settings.png">
+    <h2>Settings</h2>
+    <p>Change app settings</p></a>
+    </li>
+</ul>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="pokedex" data-theme="a">
+
+	<div data-role="header">
+		<h1>Pokedex</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Pokedex</h2>
+
+<ul data-role="listview" data-filter="true" data-inset="true">
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Balbausaur</a></li>
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Pikachu</a></li>
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Charizard</a></li>
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Mewto</a></li>
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Ho-ho</a></li>
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Suicune</a></li>
+    <li><a href="index.html"><img src="img/grey_pokeball.png">Ditto</a></li>
+</ul>
+
+		<p><a href="#home" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>John Huiskes</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="b">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+		<p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
 </body>
  
 </html>   
+
