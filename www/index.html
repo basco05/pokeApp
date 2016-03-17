@@ -19,28 +19,56 @@
     specific language governing permissions and limitations
     under the License.
 -->
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
-</html>
+ 
+<head>
+  <title>jQM Complex Demo</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+  <link rel="stylesheet" href="http://example.gajotres.net/iscrollview/jquery.mobile.iscrollview.css" />
+  <link rel="stylesheet" href="http://example.gajotres.net/iscrollview/jquery.mobile.iscrollview-pull.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="http://example.gajotres.net/iscrollview/iscroll.js"></script>
+  <script src="http://example.gajotres.net/iscrollview/jquery.mobile.iscrollview.js"></script>
+  <script src="script.js"></script>
+</head>
+ 
+<body>
+  <div data-role="page" id="home">
+    <div data-theme="a" data-role="header">
+      <h3>
+            Movie List
+        </h3>
+    </div>
+    <div data-role="content">
+      <div class="example-wrapper" data-iscroll>
+        <ul data-role="listview" id="movie-list" data-theme="a">
+ 
+        </ul>
+      </div>
+    </div>
+    <div data-theme="a" data-role="footer">
+      <h1>Copyright 2015</h1>
+    </div>
+  </div>
+  <div data-role="page" id="headline">
+    <div data-theme="a" data-role="header">
+      <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Back</a> 
+      <h3>
+            Movie Info
+        </h3>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview" id="movie-data" data-theme="a">
+ 
+      </ul>
+    </div>
+  </div>
+ 
+</body>
+ 
+</html>   
