@@ -113,3 +113,42 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+/* header */
+.ui-page .ui-header, .ui-page .ui-footer{
+    background: #FAA767 !important;
+    color: #FFFFFF;
+}
+
+/* content */
+.ui-page .ui-content{
+    background: #000000;
+     color: #FFFFFF;
+}
+
+.pokelist > li{
+    background: #FAA767 ;
+    max-width: 50%;
+    float: left;
+    border-color: #FFFFFF;
+}
+
+.pokelist > li > a {
+    width:  100px;
+    height: 180px;
+}
+
+.pokelist > li > a > img{
+    width: 100%;
+    float: left;
+}
+.pokelist> li > a > h1{
+    width: 100px;
+    float: left;
+    font-size: 12px;
+}
+.pokelist { 
+  padding: 0 !important;
+}
+
+
