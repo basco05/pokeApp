@@ -1,5 +1,5 @@
 
-/* header */
+/* header en footer*/
 .ui-page .ui-header, .ui-page .ui-footer{
     background: #FAA767 ;
     color: #FFFFFF;
@@ -9,6 +9,9 @@
 .ui-page .ui-content{
     background: #000000;
      color: #FFFFFF;
+}
+.ui-page .ui-content{
+    vertical-align: middle;
 }
 
 .pokelist > li{
