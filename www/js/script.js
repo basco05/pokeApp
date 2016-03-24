@@ -18,10 +18,15 @@ $(document).on('pageinit', '#details', function(){
 
 $(document).on('pageinit', '#pokedex', function(){  
     console.log("reached pokedex page");    
-    var url = "http://pokeapi.co/api/v2/pokemon";    
+    var url = "http://pokeapi.co/api/v2/pokemon/?limit=251&offset=0";
+   
+                      $('#pageLoader').show( "slow", function() { }); 
+                      $('#pageLoader').html('<img src="images/loader.gif" />');  
+                      console.log("waiting");   
+       
      
     $.ajax({
-        url: "http://pokeapi.co/api/v2/pokemon",
+        url: url,
         dataType: "json",
         async: true,
         success: function (result) {
@@ -29,6 +34,7 @@ $(document).on('pageinit', '#pokedex', function(){
         console.log(result);
         jQuery.each(result.results, function(index,value){
             console.log(value.name);
+            fillPokemon(index,value);
         })
         console.log("success");
         },
@@ -39,3 +45,14 @@ $(document).on('pageinit', '#pokedex', function(){
 });
 
  
+var fillPokemon = function(index,value){
+     $("#pokelistdata").append(
+                    "<li>" +
+                    "<a href ='#details'>" +
+                    "<img src='img/pokemon/" + (index + 1) + ".png'>"+
+                    "<h1>" + value.name + "</h1>" +
+                    "</a>" +
+                    "</li>"
+
+     );
+}
