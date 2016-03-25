@@ -33,12 +33,18 @@
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+            $(document).on('pageshow', '#pokedex', function(){        
+                $.mobile.loading( 'show');          
+            }); 
+        </script>
 </head>
  
 <body>
 
 <!-- Start of first page: #one -->
 <div data-role="page" id="home">
+
 
 	<div data-role="header" data-position="fixed">
 		<h1>PokeApp</h1>
